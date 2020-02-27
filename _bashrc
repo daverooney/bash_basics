@@ -1,0 +1,22 @@
+
+# User specific aliases and functions
+alias python=python36
+
+# modifications needed only in interactive mode
+if [ "$PS1" != "" ]; then
+    # Set default editor for git
+    git config --global core.editor /usr/bin/vim
+
+    # Turn on checkwinsize
+    shopt -s checkwinsize
+
+    # keep more history
+    shopt -s histappend
+    export HISTSIZE=100000
+    export HISTFILESIZE=100000
+    export PROMPT_COMMAND="history -a;"
+fi
+
+alias ll='ls -ahl'
+
+export EDITOR=/usr/bin/vim
